@@ -1,0 +1,23 @@
+
+
+
+<mat-table  [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="from">
+    <mat-header-cell *matHeaderCellDef> From </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.from}}  </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="to">
+    <mat-header-cell *matHeaderCellDef> To </mat-header-cell>
+    <mat-cell *matCellDef="let element"> {{element.to}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="credits transfer">
+    <mat-header-cell *matHeaderCellDef> Credits Transfer </mat-header-cell>
+    <mat-cell *matCellDef="let element">{{element.credit}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>

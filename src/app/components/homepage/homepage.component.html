@@ -1,0 +1,39 @@
+
+<ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-multiple">
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner>
+
+
+
+  <mat-tab-group dynamicHeight animationDuration="0ms" color="" backgroundColor="">
+
+    <mat-tab label="USER-DETAILS">
+
+      <ng-template class="pad" mat-tab-label>
+        <span>USER DETAILS &nbsp; <span class="green"></span></span>
+      </ng-template>
+      
+              <app-usertable> </app-usertable>
+    </mat-tab>
+
+
+    <mat-tab label="TRANSFER RECORDS">
+    
+      <ng-template class="pad" mat-tab-label>
+        <span> TRANSFER RECORDS &nbsp; <span class="green"></span></span>
+      </ng-template>
+
+
+      <app-transfer-records></app-transfer-records>
+    
+  
+    
+    
+    </mat-tab>
+
+
+
+
+
+
+  </mat-tab-group>

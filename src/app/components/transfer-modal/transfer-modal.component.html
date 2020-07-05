@@ -1,0 +1,51 @@
+<button type="button" class="close" data-dismiss="modal" (click)="closeDialog()" aria-label="close">
+  <span aria-hidden="true">&times;</span>
+</button>
+
+
+
+<div class="row">
+  <div class="col-md">
+
+    <form [formGroup]="creditForm" class="example-form">
+    
+    
+    
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Transfer To</mat-label>
+        <mat-select formControlName="to">
+          <mat-option *ngFor="let user of usersArray" [value]="user.name">
+            {{user.name}}
+    
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    
+      <br>
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Credit</mat-label>
+        <input formControlName="credit" matInput type="text">
+      </mat-form-field>
+      <br>
+    
+      <br>
+      <button (click)="onCreditFormSubmit()" [disabled]="creditForm.invalid" type="submit" mat-flat-button color="primary">
+        Transfer
+      </button>
+    
+    </form>
+  </div>
+
+  <div class="col-md">
+
+    <div class="container">
+      <p id="box"> User Details</p>
+      
+      <p>Name: {{currentUserObject.name }}</p>
+      <p>Email: {{currentUserObject.email}}</p>
+      <p>Credits: {{ currentUserObject.credit}}</p>
+    </div>
+
+  </div>
+
+</div>
